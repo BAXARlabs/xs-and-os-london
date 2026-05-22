@@ -169,15 +169,16 @@
   .hero .tagline strong{font-weight:700}
   .hero .ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
 
-  /* TrueFan Travel shield — real PNG watermark for light sections */
+  /* TrueFan Travel shield — staggered watermark pattern for light sections */
   .tft-watermark{position:relative;isolation:isolate}
   .tft-watermark::before{
     content:"";position:absolute;inset:0;
-    background-image:url('assets/images/truefan-shield-navy.png');
-    background-size:64px auto;
-    background-repeat:space;
-    background-position:center;
-    opacity:.05;
+    background-image:
+      url('assets/images/truefan-watermark-tile.png'),
+      url('assets/images/truefan-watermark-tile.png');
+    background-position:0 0, 120px 80px;
+    background-repeat:repeat;
+    opacity:.07;
     pointer-events:none;z-index:0;
   }
   .tft-watermark > *{position:relative;z-index:1}
